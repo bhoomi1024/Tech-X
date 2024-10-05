@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Energy Consumption Prediction</h1>
+        <form method="POST" action="/predict">
+            <label for="input1">Day 1:</label>
+            <input type="number" step="any" name="input1" required><br>
+            <label for="input2">Day 2:</label>
+            <input type="number" step="any" name="input2" required><br>
+            <label for="input3">Day 3:</label>
+            <input type="number" step="any" name="input3" required><br>
+            <label for="input4">Day 4:</label>
+            <input type="number" step="any" name="input4" required><br>
+            <label for="input5">Day 5:</label>
+            <input type="number" step="any" name="input5" required><br>
+            <label for="input6">Day 6:</label>
+            <input type="number" step="any" name="input6" required><br>
+            <label for="input7">Day 7:</label>
+            <input type="number" step="any" name="input7" required><br>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
